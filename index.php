@@ -1,39 +1,39 @@
 <?php
 
-
-require_once './interface/class/Compte.php';
-require_once './interface/class/Bank.php';
-require_once './interface/class/LivretA.php';
-require_once './interface/class/Pel.php';
+require_once("./asset/bdd/connexion.php");
 
 
-
-$user1 = new User(78545365, "Jean", "Dupont", " 01/01/1990", "Jeandupont@gmail.com");
-$comptes = new Compte('01345267891', 1500, true);
-$comptes2 = new LivretA('23445566778', 6733, false);
-$comptes3 = new Pel('23445966211', -45, true);
+?>
 
 
+<!DOCTYPE html>
+<html lang="fr">
 
-echo $user1->__toString();
-echo "<br>";
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connection</title>
+</head>
 
-$bank = new Bank();
+<body>
+    <header>
+        <nav>
 
-$bank->ajouterClient($user1);
+        </nav>
+    </header>
 
-$bank->ajouterCompte($comptes);
+    <form action="chose.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <label for="firstname">Firstname:</label>
+        <input type="text" id="firstname" name="firstname">
+        <label for="mail">Mail:</label>
+        <input type="email" id="mail" name="mail">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <input type="submit" value="Se connecter">
+    </form>
 
-$bank->ajouterCompte($comptes2);
+</body>
 
-$bank->ajouterCompte($comptes3);
-
-
-echo "Liste de compte : <br>";
-echo "<br>";
-echo "Numero de compte || Solde <br>";
-echo "-----------------------------<br>";
-
-foreach ($bank->getComptes() as $comptes) {
-    echo $comptes->__toString();
-}
+</html>
