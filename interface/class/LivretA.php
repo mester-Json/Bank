@@ -16,7 +16,6 @@ class LivretA extends Compte
         return $this->frais;
     }
 
-
     public function __toString()
     {
         $emoji = $this->solde >= 0 ? ":-)" : ":-(";

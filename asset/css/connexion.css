@@ -1,0 +1,99 @@
+body {
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+
+header {
+    background-color: rgb(40, 9, 106);
+
+
+}
+
+nav {
+    background-color: rgb(40, 9, 106);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 2%;
+    height: 150px;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    padding: 2%;
+}
+
+.logo {
+    width: 300px;
+    height: 300px;
+    margin-top: 15px;
+}
+
+form {
+    width: 1200px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(151, 151, 151, 0.375);
+    padding: 5%;
+    margin: 2% auto;
+    border: 10px double black;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    display: flex;
+}
+
+label {
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input[name="mail"],
+input[name="password"],
+input[name="name"],
+input[name="firstname"] {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 18px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+input[type="submit"] {
+    width: 70%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 18px 0;
+    border: none;
+    border-radius: 20px;
+    cursor: crosshair;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.notAccount {
+    text-decoration: none;
+    text-align: center;
+    color: #000000;
+    margin-top: 15px;
+}
+
+footer {
+    background-color: rgb(40, 9, 106);
+    text-align: center;
+    color: #ffffff;
+    padding: 1%;
+    position: absolute;
+    margin-top: 50px;
+    width: 98%;
+}

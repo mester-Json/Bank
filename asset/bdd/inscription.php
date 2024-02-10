@@ -18,6 +18,7 @@ try {
     } else {
         $emailQuery = $db->prepare("SELECT id FROM user WHERE mail = ?");
         $emailQuery->bindParam(1, $mail);
+
         $emailQuery->execute();
 
         if ($emailQuery->rowCount() > 0) {
@@ -34,7 +35,23 @@ try {
             $requete->bindParam(6, $numClient);
 
             if ($requete->execute()) {
+                $userId = $db->lastInsertId();
+
+                $numCompte = rand(100000, 999999);
+
+                $solde = 0;
+
+                $type = "courant";
+                $compteRequete = $db->prepare("INSERT INTO compte (solde, type, numCompte, user_id) VALUES (?, ?, ?, ?)");
+                $compteRequete->bindParam(1, $solde);
+                $compteRequete->bindParam(2, $type);
+                $compteRequete->bindParam(3, $numCompte);
+                $compteRequete->bindParam(4, $userId);
+                $compteRequete->execute();
+
                 echo "Inscription réussie. Vous pouvez maintenant vous connecter.";
+                echo "Votre numéro de compte est : " . $numCompte;
+                echo "Votre solde est : " . $solde;
             } else {
                 echo "Une erreur est survenue lors de l'inscription.";
             }

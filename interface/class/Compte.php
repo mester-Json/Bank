@@ -41,8 +41,6 @@ class Compte
         }
     }
 
-
-
     public function __toString()
     {
         $emoji = $this->solde >= 0 ? ":-)" : ":-(";
