@@ -24,7 +24,7 @@ require_once("./asset/bdd/connexion.php");
         </nav>
     </header>
 
-    <form action="chose.php" method="post">
+    <form action="aceuille.php" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" placeholder="La-salle">
         <!-- <label for="" id="errorName">Entrer un Nom Valide </label> -->

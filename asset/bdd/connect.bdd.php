@@ -2,8 +2,8 @@
 
 define("HOST", "localhost");
 define("DB_Name", "Bank");
-define("USER", "");
-define("PASS", "");
+define("USER", "root");
+define("PASS", "157326");
 
 
 

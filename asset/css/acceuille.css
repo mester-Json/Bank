@@ -13,16 +13,58 @@ nav {
     height: 150px;
 }
 
-h1 {
-    text-align: center;
+.fa-user-large {
+    font-size: 50px;
     color: #ffffff;
-    padding: 2%;
+    transition: color 1.3s ease;
+}
+
+.fa-user-large:hover {
+    color: #ffffff;
+    animation: pulse 1.5s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .logo {
     width: 300px;
     height: 300px;
     margin-top: 15px;
+}
+
+.container {
+    display: flex;
+    /* background-image: url(../img/colonnes-realistes-decorees-feuilles-vertes-toit-base-composition-escaliers-blanc_1284-31837.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; */
+    height: 100vh;
+
+
+    padding: 5%;
+    margin: 2% auto;
+    width: 350px;
+
+    border: 10px double black;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+}
+
+hr {
+    width: 100%;
+    margin: 10px 0;
 }
 
 footer {
